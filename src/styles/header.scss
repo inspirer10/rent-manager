@@ -1,41 +1,44 @@
 header {
     position: fixed;
+    z-index: 9999;
     left: 50%;
-    top: 1.25rem;
+    top: 18px;
     transform: translate(-50%, 0);
-    width: 50%;
+    width: 55%;
     background-color: rgba(239, 239, 239, 0.5);
     backdrop-filter: blur(10px);
-    padding: 0.75rem 1.25rem;
+    padding: 10px 1rem;
+    padding-left: 1.5rem;
     border-radius: 50px;
     border: 1px solid rgb(207, 211, 217);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
     &.visible {
         transform: translate(-50%, 0);
     }
     &.hidden {
-        transform: translate(-50%, -150%);
+        transform: translate(-50%, -135%);
     }
     h2 {
-        font-size: 2rem;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 30px;
         color: #004d9a;
-        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
         transition: .4s ease;
+        cursor: pointer;
         .icon {
             color: #000;
-            transition: .4s ease;
             transform-origin: center;
+            transition: .4s ease;
             will-change: transform;
         }
         &:hover {
-            color: #00366c;
+            color: #002d5a;
             .icon {
                 transform: rotate(30deg);
             }
@@ -45,31 +48,61 @@ header {
         display: flex;
         gap: 2rem;
         p {
+            //text-transform: uppercase;
             font-size: 18px;
             font-weight: 500;
             color: #004d9a;
-            padding: 2px 0.25rem;
-            transition: .4s ease;
+            color: #002d5a;
+            color: rgb(25, 25, 25);
+            padding: 2px;
             cursor: pointer;
+            transition: .35s ease;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                opacity: 0;
+                background-color: #002d5a;
+                transform: translateX(-50%);
+                transition: 0.35s ease;
+            }
             &:hover {
-                color: #00366c;
+                color: #002d5a;
                 transform: translateY(-2px);
+                &::after {
+                    width: 100%;
+                    opacity: 1;
+                }
             }
         }
     }
     button {
-        background-color: #004d9a;
-        color: white;
-        border: none;
-        padding: 0.75rem 1.25rem;
-        border-radius: 50px;
         font-size: 16px;
         font-weight: 500;
+        background-color: #004d9a;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        border: none;
+        padding: 14px 1.5rem;
+        border-radius: 50px;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.3s ease;
+        .icon {
+            font-size: 16px;
+            transition: 0.275s ease;
+        }
         &:hover {
-            background-color: #00366c;
-            transform: translateY(-2px);
+            background-color: #002d5a;
+            //transform: translateY(-2px);
+            .icon {
+                transform: translateX(4px);
+            }
         }
     }
 }

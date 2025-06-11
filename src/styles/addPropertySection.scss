@@ -1,0 +1,23 @@
+.addProperty-section {
+    width: 80%;
+    margin: 5rem auto;
+    padding-top: 10vh;
+    h2 {
+        margin: 0;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2.75rem;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        color: rgb(5, 0, 50);
+    }
+    .subHeading {
+        //font-family: 'Lato', sans-serif;
+        font-family: 'SUSE', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        // letter-spacing: -0.25px;
+        margin: 0.25rem auto 2.5rem;
+        color: rgb(93, 96, 121);
+        // color: rgba(65, 71, 123, 0.85);
+    }
+}

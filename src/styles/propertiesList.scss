@@ -1,0 +1,113 @@
+.propertiesList-section {
+    margin: 7.5rem auto;
+    padding-top: 10vh;
+    h2 {
+        width: 80%;
+        margin: 0 auto;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2.75rem;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        color: rgb(5, 0, 70);
+    }
+    .subHeading {
+        width: 80%;
+        //font-family: 'Lato', sans-serif;
+        font-family: 'SUSE', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        // letter-spacing: -0.25px;
+        margin: 0.25rem auto 2.5rem;
+        color: rgb(93, 96, 121);
+        // color: rgba(65, 71, 123, 0.85);
+    }
+    .list-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        margin: 0 auto;
+        .list-categories {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            p {
+                font-family: 'Ubuntu', sans-serif;
+                font-family: 'Inter', sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: rgb(5, 0, 50);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: calc(100% / 6);
+                padding: 1.5rem 0.75rem;
+                line-height: 1;
+                background-color: lightblue;
+                border-bottom: 1px solid rgb(5, 0, 75);
+                gap: 6px;
+                cursor: pointer;
+                .icon {
+                    color: rgb(5, 0, 75);
+                }
+                &:first-child {
+                    border-top-left-radius: 12px;
+                }
+                &:last-child {
+                    border-top-right-radius: 12px;
+                }
+            }
+        }
+        //*  WIERSZ Z DANYMI WYNAJMU PRZYKŁADOWEGO MIESZKANIA
+        .list-position {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 1px solid rgb(5, 0, 75);
+            &:nth-of-type(2n + 1) {
+                p {
+                    background-color: rgb(192, 244, 229);
+                    &:nth-of-type(2n) {
+                        background-color: rgb(190, 245, 227);
+                        background-color: rgb(212, 255, 242);
+                    }
+                }
+            }
+            &:last-of-type {
+                border-bottom: none;
+                p {
+                    &:first-child {
+                        border-bottom-left-radius: 12px;
+                    }
+                    &:last-child {
+                        border-bottom-right-radius: 12px;
+                    }
+                }
+            }
+            p {
+                color: rgb(25, 25, 25);
+                font-family: 'SUSE', sans-serif;
+                font-size: 17px;
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                white-space: nowrap;
+                width: calc(100% / 6);
+                padding: 22px 0.75rem;
+                line-height: 1;
+                background-color: rgb(212, 255, 242);
+                &:nth-of-type(2n) {
+                    background-color: rgb(190, 245, 227);
+                    background-color: rgb(192, 244, 229);
+                }
+            }
+        }
+    }
+}

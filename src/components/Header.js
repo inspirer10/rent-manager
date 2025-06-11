@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-
 import { HiMiniCubeTransparent } from 'react-icons/hi2';
+import { FaArrowRightLong } from 'react-icons/fa6';
 
 function Header() {
     const [isVisible, setIsVisible] = useState(true);
@@ -13,9 +13,9 @@ function Header() {
             const currentScrollY = window.scrollY;
 
             if (currentScrollY > lastScrollY) {
-                setIsVisible(false); // Scrolling down
+                setIsVisible(false); //Scrolling down
             } else {
-                setIsVisible(true); // Scrolling up
+                setIsVisible(true); //Scrolling up
             }
 
             setLastScrollY(currentScrollY);
@@ -27,17 +27,21 @@ function Header() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [lastScrollY]);
+
     return (
         <header className={`header ${isVisible ? 'visible' : 'hidden'}`}>
             <h2>
                 <HiMiniCubeTransparent className='icon' /> RentHub
             </h2>
             <nav>
-                <p>Test</p>
-                <p>Test</p>
-                <p>Test</p>
+                <p>Properties</p>
+                <p>Rentals</p>
+                <p>Income Reports</p>
+                <p>FAQs</p>
             </nav>
-            <button>Check It</button>
+            <button>
+                Get Started <FaArrowRightLong className='icon' />
+            </button>
         </header>
     );
 }

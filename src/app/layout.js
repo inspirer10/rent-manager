@@ -1,5 +1,8 @@
 import './globals.scss';
 import '../styles/header.scss';
+import '../styles/introduction.scss';
+import '../styles/propertiesList.scss';
+import '../styles/addPropertySection.scss';
 
 export const metadata = {
     title: 'Rent Manager',

@@ -1,0 +1,149 @@
+.introduction-section {
+    width: 80%;
+    margin: 12.5rem auto 5rem;
+    text-align: center;
+    .thumbnails-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 47.5%;
+        margin: 0 auto 1.5rem;
+        .card {
+            padding: 4px 4px 8px;
+            height: auto;
+            width: 10rem;
+            background-color: rgb(230, 230, 230);
+            border: 1px solid rgb(205, 205, 205);
+            border-radius: 12px;
+            transform: rotate(-2deg);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.125);
+            cursor: pointer;
+            transition: 0.325s ease;
+            transition-delay: .125s;
+            will-change: transform;
+            &:nth-of-type(2) {
+                transform: rotate(3deg);
+            }
+            &:nth-of-type(3) {
+                transform: rotate(-3deg);
+            }
+            &:nth-of-type(4) {
+                transform: rotate(4deg);
+            }
+            img {
+                object-fit: cover;
+                height: 8rem;
+                width: 100%;
+                border-radius: 7px;
+                will-change: transform;
+            }
+            P {
+                color: rgb(10, 10, 125);
+                font-family: 'Merienda', serif;
+                font-size: 16px;
+                font-weight: 500;
+                font-style: italic;
+                padding-top: 6px;
+                transition: 0.35s ease;
+                transition-delay: .125s;
+                will-change: transform;
+            }
+            &:hover {
+                transform: rotate(0) scale(1.1);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.225);
+                border-color: rgb(190, 190, 190);
+                background-color: white;
+                z-index: 1;
+                p {
+                    color: #000;
+                }
+            }
+        }
+    }
+    .thumbnails-wrapper:has(.card:hover) .card:not(:hover) {
+        filter: blur(2.5px) brightness(0.9);
+        opacity: 0.55;
+    }
+    .heading {
+        font-family: 'Ubuntu', sans-serif;
+        //font-family: 'Lato', sans-serif;
+        font-size: 4.5rem;
+        font-weight: 700;
+        color: rgb(5, 0, 50);
+        margin-top: 2.5rem;
+        span {
+            color: rgb(25, 25, 139);
+            color: rgb(10, 10, 125);
+            //color: #004d9a;
+        }
+    }
+    .subHeading {
+        font-family: 'Lato', sans-serif;
+        font-family: 'Merienda', sans-serif;
+        font-family: 'SUSE', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.4;
+        // letter-spacing: -0.25px;
+        margin: 0.5rem auto;
+        width: 35%;
+        color: rgb(93, 96, 121);
+        // color: rgba(65, 71, 123, 0.85);
+        padding: 0 1rem;
+    }
+    button {
+        margin: 1.75rem auto;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: rgb(5, 0, 50);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        border: none;
+        padding: 16px 2.5rem;
+        border-radius: 50px;
+        box-shadow: 0 6px 25px rgba(5, 0, 50, 0.4);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.3s ease;
+        transition-delay: .1s;
+        &:active {
+            transition: .2s ease;
+            transition-delay: 0s;
+            transform: translateY(2px);
+            box-shadow: 0 6px 25px rgba(0, 65, 130, 0.6);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            transition: 0.5s ease;
+            transition-delay: .1s;
+        }
+        .icon {
+            font-size: 16px;
+            transition: 0.3s ease;
+            transition-delay: .1s;
+        }
+        &:hover {
+            background-color: #003b75;
+            //transform: translateY(-2px);
+            &::before {
+                transform: translateX(100%);
+            }
+            .icon {
+                transform: translateX(4px);
+            }
+        }
+    }
+}
