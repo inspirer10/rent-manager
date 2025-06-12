@@ -2,7 +2,7 @@ header {
     position: fixed;
     z-index: 9999;
     left: 50%;
-    top: 18px;
+    top: 16px;
     transform: translate(-50%, 0);
     width: 55%;
     background-color: rgba(239, 239, 239, 0.5);
@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease;
     &.visible {
         transform: translate(-50%, 0);
     }

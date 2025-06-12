@@ -3,6 +3,7 @@ import '../styles/header.scss';
 import '../styles/introduction.scss';
 import '../styles/propertiesList.scss';
 import '../styles/addPropertySection.scss';
+import '../styles/faq.scss';
 
 export const metadata = {
     title: 'Rent Manager',

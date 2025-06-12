@@ -1,0 +1,100 @@
+.faq-section {
+    width: 80%;
+    margin: 3rem auto 0;
+    padding-top: 10vh;
+    .heading {
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        color: rgb(5, 0, 50);
+    }
+    .subHeading {
+        text-align: center;
+        //font-family: 'Lato', sans-serif;
+        font-family: 'SUSE', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        // letter-spacing: -0.25px;
+        margin: 0.25rem auto 2.5rem;
+        color: rgb(93, 96, 121);
+        // color: rgba(65, 71, 123, 0.85);
+    }
+    .faq-container {
+        width: 60%;
+        margin: 5rem auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .faq-item {
+        border-bottom: 1.5px solid rgb(210, 210, 210);
+        padding-bottom: 1rem;
+        transition: 0.3s ease;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .faq-question {
+        font-size: 21px;
+        font-weight: 600;
+        width: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(5, 0, 50);
+        cursor: pointer;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        transition: 0.3s ease;
+        &:hover,
+        &:focus {
+            color: #1964dd;
+            background: rgba(59, 130, 246, 0.15);
+        }
+        &.open {
+            background: rgba(59, 130, 246, 0.3);
+            transition: 0.3s ease;
+            &:hover,
+            &:focus {
+                color: #fff;
+                background: rgba(0, 40, 101, 0.75); // darker/more saturated when open and hovered
+            }
+        }
+        .faq-icon {
+            font-size: 1.1em;
+            margin-left: 1rem;
+            transition: 0.3s ease;
+            &.open {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .faq-answer {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        padding: 0;
+        transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.25s;
+        p {
+            font-family: 'Ubuntu', sans-serif;
+            line-height: 1.45;
+            overflow: hidden;
+            font-size: 18px;
+            color: rgb(93, 96, 121);
+            padding: 0 1rem;
+        }
+        &.open {
+            grid-template-rows: 1fr;
+            padding: 0.75rem 0 0.75rem 0;
+            p {
+                padding: 0.25rem 1rem 0;
+            }
+        }
+    }
+}

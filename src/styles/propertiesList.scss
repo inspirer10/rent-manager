@@ -1,25 +1,61 @@
 .propertiesList-section {
     margin: 7.5rem auto;
     padding-top: 10vh;
-    h2 {
+    .section-header {
         width: 80%;
         margin: 0 auto;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 2.75rem;
-        font-weight: 600;
-        letter-spacing: -0.5px;
-        color: rgb(5, 0, 70);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-wrapper {
+            display: flex;
+            flex-direction: column;
+            h2 {
+                margin: 0;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 2.75rem;
+                font-weight: 600;
+                letter-spacing: -0.5px;
+                color: rgb(5, 0, 50);
+            }
+            .subHeading {
+                //font-family: 'Lato', sans-serif;
+                font-family: 'SUSE', sans-serif;
+                font-size: 24px;
+                font-weight: 500;
+                // letter-spacing: -0.25px;
+                margin: 0.25rem 0 2.5rem;
+                color: rgb(93, 96, 121);
+                // color: rgba(65, 71, 123, 0.85);
+            }
+        }
+        .icon {
+            font-size: 2rem;
+            //color: #3b82f6;
+            //color: rgb(5, 0, 50);
+            color: rgb(93, 96, 121);
+        }
     }
-    .subHeading {
-        width: 80%;
-        //font-family: 'Lato', sans-serif;
-        font-family: 'SUSE', sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-        // letter-spacing: -0.25px;
-        margin: 0.25rem auto 2.5rem;
-        color: rgb(93, 96, 121);
-        // color: rgba(65, 71, 123, 0.85);
+    .filters-row {
+        display: flex;
+        gap: 1rem;
+        padding: 1.5rem 0 1rem 0;
+        flex-wrap: wrap;
+        select,
+        input[type="date"],
+        input[type="number"] {
+            padding: 0.5rem 1rem;
+            border: 1px solid #d6d6d6;
+            border-radius: 7px;
+            font-size: 1rem;
+            background: #fafbfc;
+            min-width: 120px;
+            transition: border 0.2s;
+            &:focus {
+                border-color: #3b82f6;
+                outline: none;
+            }
+        }
     }
     .list-container {
         display: flex;
@@ -47,11 +83,12 @@
                 padding: 1.5rem 0.75rem;
                 line-height: 1;
                 background-color: lightblue;
-                border-bottom: 1px solid rgb(5, 0, 75);
+                border-bottom: 2px solid rgb(5, 0, 75);
                 gap: 6px;
                 cursor: pointer;
                 .icon {
                     color: rgb(5, 0, 75);
+                    //color: #5BC8B2;
                 }
                 &:first-child {
                     border-top-left-radius: 12px;
@@ -68,7 +105,7 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            border-bottom: 1px solid rgb(5, 0, 75);
+            border-bottom: 1px solid #5BC8B2;
             &:nth-of-type(2n + 1) {
                 p {
                     background-color: rgb(192, 244, 229);
@@ -102,9 +139,10 @@
                 width: calc(100% / 6);
                 padding: 22px 0.75rem;
                 line-height: 1;
-                background-color: rgb(212, 255, 242);
+                //background-color: rgb(212, 255, 242);
+                background-color: rgb(216, 255, 248);
                 &:nth-of-type(2n) {
-                    background-color: rgb(190, 245, 227);
+                    //background-color: rgb(190, 245, 227);
                     background-color: rgb(192, 244, 229);
                 }
             }
