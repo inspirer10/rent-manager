@@ -79,7 +79,7 @@ function PropertiesList() {
                     </p>
                 </div>
 
-                <FaList className='icon' />
+                <FaList className='icon' aria-hidden='true' />
             </div>
 
             <main className='list-container'>

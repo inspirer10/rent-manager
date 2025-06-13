@@ -7,7 +7,7 @@ function Introduction() {
         { image: '/image2.png', text: 'Flat' },
         { image: '/image11.png', text: 'House' },
         { image: '/image4.png', text: 'Garage' },
-        { image: '/image3.png', text: 'Parking Space' },
+        { image: '/image3.jpg', text: 'Parking Space' },
     ];
 
     return (

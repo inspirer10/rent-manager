@@ -54,7 +54,7 @@ function FAQ() {
                             aria-expanded={openIndex === idx}
                             aria-controls={`faq-content-${idx}`}
                         >
-                            <span>{item.question}</span>
+                            <p>{item.question}</p>
                             <FaChevronDown
                                 className={`faq-icon${
                                     openIndex === idx ? ' open' : ''
