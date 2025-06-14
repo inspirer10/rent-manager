@@ -37,7 +37,7 @@ function FAQ() {
         setOpenIndex(openIndex === idx ? null : idx);
     };
     return (
-        <section className='faq-section'>
+        <section className='faq-section' id='faq'>
             <h2 className='heading'>Frequently Asked Questions</h2>
             <p className='subHeading'>
                 Find answers to the most common questions about managing your

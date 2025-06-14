@@ -2,7 +2,7 @@ header {
     position: fixed;
     z-index: 9999;
     left: 50%;
-    top: 16px;
+    top: 14px;
     transform: translate(-50%, 0);
     width: 55%;
     background-color: rgba(239, 239, 239, 0.5);
@@ -46,8 +46,8 @@ header {
     }
     nav {
         display: flex;
-        gap: 2rem;
-        p {
+        gap: 2.25rem;
+        a {
             //text-transform: uppercase;
             font-size: 18px;
             font-weight: 500;

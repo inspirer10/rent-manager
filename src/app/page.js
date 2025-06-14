@@ -9,6 +9,7 @@ import PropertiesList from '@/components/PropertiesList';
 import AddPropertySection from '@/components/AddPropertySection';
 import FAQ from '@/components/FAQ';
 import Testimonials from '@/components/Testimonials';
+import Footer from '@/components/Footer';
 
 export default function Home() {
     useEffect(() => {
@@ -30,6 +31,7 @@ export default function Home() {
             <AddPropertySection />
             <FAQ />
             <Testimonials />
+            <Footer />
         </>
     );
 }

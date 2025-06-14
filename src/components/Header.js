@@ -28,16 +28,39 @@ function Header() {
         };
     }, [lastScrollY]);
 
+    const handleSectionRouting = (e, section) => {
+        e.preventDefault();
+
+        // Jeśli jesteśmy już na stronie głównej, przewiń do sekcji
+        document
+            .getElementById(`${section}`)
+            ?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <header className={`header ${isVisible ? 'visible' : 'hidden'}`}>
             <h2>
                 <HiMiniCubeTransparent className='icon' /> RentHub
             </h2>
             <nav>
-                <p>Properties</p>
-                <p>Rentals</p>
-                <p>Income Reports</p>
-                <p>FAQs</p>
+                <a
+                    href='#propertiesList'
+                    onClick={(e) => handleSectionRouting(e, 'propertiesList')}
+                >
+                    Properties
+                </a>
+                <a href='#' onClick={(e) => handleSectionRouting(e, '')}>
+                    Rentals
+                </a>
+                <a
+                    href='#aboutUs'
+                    onClick={(e) => handleSectionRouting(e, 'aboutUs')}
+                >
+                    About Us
+                </a>
+                <a href='#faq' onClick={(e) => handleSectionRouting(e, 'faq')}>
+                    FAQ
+                </a>
             </nav>
             <button>
                 Get Started <FaArrowRightLong className='icon' />

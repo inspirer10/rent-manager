@@ -61,7 +61,7 @@ const testimonialsData = [
 
 function Testimonials() {
     return (
-        <section className='testimonials-section'>
+        <section className='testimonials-section' id='aboutUs'>
             <div className='section-header'>
                 <div className='header-wrapper'>
                     <h2>Trusted by Renters</h2>

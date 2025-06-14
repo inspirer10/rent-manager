@@ -5,6 +5,7 @@ import '../styles/propertiesList.scss';
 import '../styles/addPropertySection.scss';
 import '../styles/faq.scss';
 import '../styles/testimonials.scss';
+import '../styles/footer.scss';
 
 export const metadata = {
     title: 'Rent Manager',
