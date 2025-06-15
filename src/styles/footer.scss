@@ -111,6 +111,7 @@
         margin: 2.25rem auto 0 auto;
         display: flex;
         justify-content: space-between;
+        flex-direction: row-reverse;
         align-items: center;
         border-top: 1px solid #e6e6e6;
         padding-top: 1.5rem;
@@ -123,16 +124,16 @@
                 position: relative;
                 color: #2563eb;
                 text-decoration: none;
-                padding-bottom: 2px;
-                transition: color 0.3s;
+                padding-bottom: 1px;
                 overflow: hidden;
+                transition: 0.3s ease;
                 &::after {
                     content: '';
                     position: absolute;
                     left: 50%;
                     bottom: 0;
                     width: 0;
-                    height: 2px;
+                    height: 1px;
                     background: #2563eb;
                     transition: left 0.3s, width 0.3s;
                     border-radius: 2px;

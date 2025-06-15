@@ -12,7 +12,6 @@ function Footer() {
     const handleSectionRouting = (e, section) => {
         e.preventDefault();
 
-        // Jeśli jesteśmy już na stronie głównej, przewiń do sekcji
         document
             .getElementById(`${section}`)
             ?.scrollIntoView({ behavior: 'smooth' });

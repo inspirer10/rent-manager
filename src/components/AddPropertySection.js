@@ -103,7 +103,7 @@ function AddPropertySection() {
     };
 
     return (
-        <section className='addProperty-section'>
+        <section className='addProperty-section' id='rentals'>
             <div className='section-header'>
                 <div className='header-wrapper'>
                     <h2>Add New Rental</h2>

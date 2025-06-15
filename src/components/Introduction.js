@@ -20,6 +20,31 @@ function Introduction() {
                     </div>
                 ))}
             </div>
+
+            <div className='waitlist-badge' aria-label='Join waitlist'>
+                <div className='waitlist-avatars'>
+                    <Image
+                        src='/avatars/person1.jpg'
+                        alt='User 1'
+                        height={50}
+                        width={50}
+                    />
+                    <Image
+                        src='/avatars/person2.jpg'
+                        alt='User 2'
+                        height={50}
+                        width={50}
+                    />
+                    <Image
+                        src='/avatars/person5.jpg'
+                        alt='User 3'
+                        height={50}
+                        width={50}
+                    />
+                </div>
+                <p>Join 3 million other satisfied users</p>
+            </div>
+
             <h2 className='heading'>
                 All your <span>rentals</span> in one place!
             </h2>

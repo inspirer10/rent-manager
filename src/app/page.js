@@ -3,8 +3,9 @@
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 
-import Introduction from '@/components/Introduction';
 import Header from '../components/Header';
+import Introduction from '@/components/Introduction';
+import HowItWorks from '@/components/HowItWorks';
 import PropertiesList from '@/components/PropertiesList';
 import AddPropertySection from '@/components/AddPropertySection';
 import FAQ from '@/components/FAQ';
@@ -27,6 +28,7 @@ export default function Home() {
         <>
             <Header />
             <Introduction />
+            <HowItWorks />
             <PropertiesList />
             <AddPropertySection />
             <FAQ />

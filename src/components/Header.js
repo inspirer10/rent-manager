@@ -31,7 +31,6 @@ function Header() {
     const handleSectionRouting = (e, section) => {
         e.preventDefault();
 
-        // Jeśli jesteśmy już na stronie głównej, przewiń do sekcji
         document
             .getElementById(`${section}`)
             ?.scrollIntoView({ behavior: 'smooth' });
@@ -49,7 +48,10 @@ function Header() {
                 >
                     Properties
                 </a>
-                <a href='#' onClick={(e) => handleSectionRouting(e, '')}>
+                <a
+                    href='#rentals'
+                    onClick={(e) => handleSectionRouting(e, 'rentals')}
+                >
                     Rentals
                 </a>
                 <a
