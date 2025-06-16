@@ -12,15 +12,6 @@ function Introduction() {
 
     return (
         <section className='introduction-section'>
-            <div className='thumbnails-wrapper'>
-                {cardsData.map(({ image, text }, index) => (
-                    <div className='card' key={index}>
-                        <Image src={image} alt='' height={300} width={300} />
-                        <p>{text}</p>
-                    </div>
-                ))}
-            </div>
-
             <div className='waitlist-badge' aria-label='Join waitlist'>
                 <div className='waitlist-avatars'>
                     <Image
@@ -56,6 +47,15 @@ function Introduction() {
             <button>
                 Add Property <FaArrowRightLong className='icon' />
             </button>
+
+            <div className='thumbnails-wrapper'>
+                {cardsData.map(({ image, text }, index) => (
+                    <div className='card' key={index}>
+                        <Image src={image} alt='' height={300} width={300} />
+                        <p>{text}</p>
+                    </div>
+                ))}
+            </div>
         </section>
     );
 }

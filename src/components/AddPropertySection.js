@@ -3,15 +3,20 @@
 import React, { useState } from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { BsBuildingAdd } from 'react-icons/bs';
+import { useProperties } from '@/context/PropertiesContext';
 
 function AddPropertySection() {
+    const { addProperty } = useProperties();
     const today = new Date().toISOString().split('T')[0];
     const [startDate, setStartDate] = useState(today);
     const [endDate, setEndDate] = useState('');
 
     const [form, setForm] = useState({
-        tenant: '',
+        status: '',
         property: '',
+        tenant: '',
+        startDate: '',
+        endDate: '',
         monthlyFee: '',
         adminFee: '',
         deposit: '',
@@ -86,12 +91,27 @@ function AddPropertySection() {
         setSubmitting(true);
 
         // Simulate API call
+        addProperty({
+            status: 'Active',
+            property: form.property,
+            tenant: form.tenant,
+            rentStart: startDate,
+            rentEnd: endDate,
+            monthlyFee: form.monthlyFee,
+            administrativeFee: form.adminFee,
+            deposit: form.deposit,
+            paymentDay: form.paymentDay,
+        });
+
         setTimeout(() => {
             setSubmitting(false);
             setSubmitted(true);
             setForm({
-                tenant: '',
+                status: '',
                 property: '',
+                tenant: '',
+                startDate: '',
+                endDate: '',
                 monthlyFee: '',
                 adminFee: '',
                 deposit: '',
@@ -99,7 +119,7 @@ function AddPropertySection() {
             });
             setStartDate(today);
             setEndDate('');
-        }, 1200);
+        }, 1000);
     };
 
     return (
@@ -157,10 +177,10 @@ function AddPropertySection() {
                             aria-invalid={!!errors.property}
                         >
                             <option value=''>Select property type</option>
-                            <option value='flat'>Flat</option>
-                            <option value='house'>House</option>
-                            <option value='garage'>Garage</option>
-                            <option value='parking'>Parking Space</option>
+                            <option value='Flat'>Flat</option>
+                            <option value='House'>House</option>
+                            <option value='Garage'>Garage</option>
+                            <option value='Parking Space'>Parking Space</option>
                         </select>
                         {errors.property && (
                             <div className='form-error' role='alert'>
@@ -182,7 +202,7 @@ function AddPropertySection() {
                             id='start-date'
                             name='start-date'
                             value={startDate}
-                            min={today}
+                            // min={today}
                             onChange={handleStartDateChange}
                             {...requiredProps}
                             aria-invalid={!!errors.startDate}

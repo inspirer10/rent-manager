@@ -11,6 +11,7 @@ import AddPropertySection from '@/components/AddPropertySection';
 import FAQ from '@/components/FAQ';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
+import { PropertiesProvider } from '@/context/PropertiesContext';
 
 export default function Home() {
     useEffect(() => {
@@ -25,7 +26,7 @@ export default function Home() {
     }, []);
 
     return (
-        <>
+        <PropertiesProvider>
             <Header />
             <Introduction />
             <HowItWorks />
@@ -34,6 +35,6 @@ export default function Home() {
             <FAQ />
             <Testimonials />
             <Footer />
-        </>
+        </PropertiesProvider>
     );
 }

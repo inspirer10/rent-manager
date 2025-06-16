@@ -4,63 +4,34 @@ import React, { useState } from 'react';
 
 import { HiOutlineSwitchVertical } from 'react-icons/hi';
 import { FaList } from 'react-icons/fa6';
+import { useProperties } from '@/context/PropertiesContext';
 
 function PropertiesList() {
-    const data = [
-        {
-            status: 'Active',
-            property: 'Apartment 1',
-            tenant: 'Basia Basiowa',
-            rentStart: '2025-01-01',
-            rentEnd: '2026-06-01',
-            rentAmount: 3500,
-        },
-        {
-            status: 'Inactive',
-            property: 'Apartment 2',
-            tenant: 'Kacper Kowalski',
-            rentStart: '2023-01-01',
-            rentEnd: '2024-06-01',
-            rentAmount: 2500,
-        },
-        {
-            status: 'Active',
-            property: 'Apartment 3',
-            tenant: 'Adam Nowak',
-            rentStart: '2025-01-01',
-            rentEnd: '2027-06-01',
-            rentAmount: 4500,
-        },
-        {
-            status: 'Inactive',
-            property: 'Apartment 4',
-            tenant: 'Francis Underwood',
-            rentStart: '2013-01-01',
-            rentEnd: '2015-06-01',
-            rentAmount: 1500,
-        },
-    ];
+    const { properties } = useProperties();
 
     // Filter states
     const [status, setStatus] = useState('');
     const [minAmount, setMinAmount] = useState('');
     const [maxAmount, setMaxAmount] = useState('');
-    const [sortDirection, setSortDirection] = useState('asc'); // 'asc' or 'desc'
+    const [propertyType, setPropertyType] = useState('');
+    const [isSortingByAmount, setIsSortingByAmount] = useState(false);
+    const [sortDirection, setSortDirection] = useState('asc'); //'asc' or 'desc'
 
     // Filtering logic
-    const filteredData = data.filter((item) => {
+    const filteredData = properties.filter((item) => {
         const matchStatus = status ? item.status === status : true;
+        const matchType = propertyType ? item.property === propertyType : true;
         const matchMinAmount = minAmount
             ? item.rentAmount >= parseFloat(minAmount)
             : true;
         const matchMaxAmount = maxAmount
             ? item.rentAmount <= parseFloat(maxAmount)
             : true;
-        return matchStatus && matchMinAmount && matchMaxAmount;
+        return matchStatus && matchType && matchMinAmount && matchMaxAmount;
     });
 
     // Sorting logic
-    const sortedData = [...filteredData].sort((a, b) => {
+    const sortedDataX = [...filteredData].sort((a, b) => {
         if (sortDirection === 'asc') {
             return a.rentAmount - b.rentAmount;
         } else {
@@ -68,9 +39,32 @@ function PropertiesList() {
         }
     });
 
+    const sortedData = [...filteredData].sort((a, b) => {
+        if (isSortingByAmount) {
+            return sortDirection === 'asc'
+                ? a.rentAmount - b.rentAmount
+                : b.rentAmount - a.rentAmount;
+        }
+
+        // Domyślne sortowanie (najpierw status, potem cena)
+        if (a.status === b.status) {
+            return a.rentAmount - b.rentAmount;
+        }
+        return a.status === 'Active' ? -1 : 1;
+    });
+
     // Toggle sort direction
     const handleSortToggle = () => {
-        setSortDirection((prev) => (prev === 'asc' ? 'desc' : 'asc'));
+        if (!isSortingByAmount) {
+            setIsSortingByAmount(true);
+            setSortDirection('asc');
+        } else {
+            if (sortDirection === 'asc') {
+                setSortDirection('desc');
+            } else {
+                setIsSortingByAmount(false);
+            }
+        }
     };
 
     return (
@@ -120,6 +114,17 @@ function PropertiesList() {
                     aria-label='Max rent amount'
                     placeholder='Max amount'
                 />
+                <select
+                    value={propertyType}
+                    onChange={(e) => setPropertyType(e.target.value)}
+                    aria-label='Filter by property type'
+                >
+                    <option value=''>All Types</option>
+                    <option value='Garage'>Garage</option>
+                    <option value='Flat'>Flat</option>
+                    <option value='House'>House</option>
+                    <option value='Parking Space'>Parking Space</option>
+                </select>
             </div>
 
             <main className='list-container'>
@@ -139,9 +144,11 @@ function PropertiesList() {
                             alignItems: 'center',
                             gap: '0.35em',
                         }}
-                        title={`Sort by amount (${
-                            sortDirection === 'asc' ? 'ascending' : 'descending'
-                        })`}
+                        title={`${
+                            isSortingByAmount
+                                ? `Sorted by amount (${sortDirection})`
+                                : 'Click to sort by amount'
+                        }`}
                     >
                         RENT AMOUNT
                         <HiOutlineSwitchVertical

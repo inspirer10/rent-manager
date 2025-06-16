@@ -1,71 +1,7 @@
 .introduction-section {
     width: 80%;
-    margin: 10rem auto 2.5rem;
+    margin: 12.5rem auto 2.5rem;
     text-align: center;
-    .thumbnails-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        width: 47.5%;
-        margin: 0 auto 1.5rem;
-        .card {
-            padding: 4px 4px 8px;
-            height: auto;
-            width: 10rem;
-            background-color: rgb(230, 230, 230);
-            border: 1px solid rgb(205, 205, 205);
-            border-radius: 12px;
-            transform: rotate(-2deg);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.125);
-            cursor: pointer;
-            transition: 0.325s ease;
-            transition-delay: .125s;
-            will-change: transform;
-            &:nth-of-type(2) {
-                transform: rotate(3deg);
-            }
-            &:nth-of-type(3) {
-                transform: rotate(-3deg);
-            }
-            &:nth-of-type(4) {
-                transform: rotate(4deg);
-            }
-            img {
-                object-fit: cover;
-                height: 8rem;
-                width: 100%;
-                border-radius: 7px;
-                will-change: transform;
-            }
-            P {
-                color: rgb(10, 10, 125);
-                font-family: 'Merienda', serif;
-                font-size: 16px;
-                font-weight: 500;
-                font-style: italic;
-                padding-top: 6px;
-                transition: 0.35s ease;
-                transition-delay: .125s;
-                will-change: transform;
-            }
-            &:hover {
-                transform: rotate(0) scale(1.1);
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.225);
-                border-color: rgb(190, 190, 190);
-                background-color: white;
-                z-index: 1;
-                p {
-                    color: #000;
-                }
-            }
-        }
-    }
-    .thumbnails-wrapper:has(.card:hover) .card:not(:hover) {
-        filter: blur(2.5px) brightness(0.9);
-        opacity: 0.55;
-    }
     .waitlist-badge {
         display: inline-flex;
         align-items: center;
@@ -79,8 +15,7 @@
         border-radius: 99px;
         padding: 0.5rem 1.25rem 0.5rem 0.75rem;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.225);
-        margin-top: 2.5rem;
-        margin-bottom: 0.75rem;
+        margin-bottom: 1rem;
         user-select: none;
         width: fit-content;
         .waitlist-avatars {
@@ -184,5 +119,69 @@
                 transform: translateX(4px);
             }
         }
+    }
+    .thumbnails-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 52.5%;
+        margin: 5rem auto 0;
+        .card {
+            padding: 4px 4px 8px;
+            height: auto;
+            width: 11rem;
+            background-color: rgb(230, 230, 230);
+            border: 1px solid rgb(205, 205, 205);
+            border-radius: 12px;
+            transform: rotate(-2deg);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.125);
+            cursor: pointer;
+            transition: 0.325s ease;
+            transition-delay: .125s;
+            will-change: transform;
+            &:nth-of-type(2) {
+                transform: rotate(3deg);
+            }
+            &:nth-of-type(3) {
+                transform: rotate(-3deg);
+            }
+            &:nth-of-type(4) {
+                transform: rotate(4deg);
+            }
+            img {
+                object-fit: cover;
+                height: 9rem;
+                width: 100%;
+                border-radius: 7px;
+                will-change: transform;
+            }
+            P {
+                color: rgb(10, 10, 125);
+                font-family: 'Merienda', serif;
+                font-size: 16px;
+                font-weight: 500;
+                font-style: italic;
+                padding-top: 6px;
+                transition: 0.35s ease;
+                transition-delay: .125s;
+                will-change: transform;
+            }
+            &:hover {
+                transform: rotate(0) scale(1.1);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.225);
+                border-color: rgb(190, 190, 190);
+                background-color: white;
+                z-index: 1;
+                p {
+                    color: #000;
+                }
+            }
+        }
+    }
+    .thumbnails-wrapper:has(.card:hover) .card:not(:hover) {
+        filter: blur(2.5px) brightness(0.9);
+        opacity: 0.55;
     }
 }

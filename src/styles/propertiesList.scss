@@ -122,6 +122,13 @@
             align-items: center;
             width: 100%;
             border-bottom: 1px solid #5BC8B2;
+            &.empty {
+                width: 600%;
+                p {
+                    font-size: 20px;
+                    padding: 1.5rem 0;
+                }
+            }
             &:nth-of-type(2n + 1) {
                 p {
                     background-color: rgb(192, 244, 229);
@@ -149,6 +156,7 @@
                 font-weight: 600;
                 display: flex;
                 justify-content: center;
+                text-transform: capitalize;
                 align-items: center;
                 overflow: hidden;
                 white-space: nowrap;
