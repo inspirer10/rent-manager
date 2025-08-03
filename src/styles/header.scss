@@ -5,6 +5,7 @@ header {
     top: 14px;
     transform: translate(-50%, 0);
     width: 55%;
+    min-width: 1000px;
     background-color: rgba(239, 239, 239, 0.5);
     backdrop-filter: blur(10px);
     padding: 10px 1rem;
@@ -15,6 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: transform 0.3s ease;
+    transition-delay: 0.05s;
     &.visible {
         transform: translate(-50%, 0);
     }
@@ -29,13 +31,15 @@ header {
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
-        transition: .4s ease;
         cursor: pointer;
+        transition: .4s ease;
+        transition-delay: 0.05s;
         .icon {
             color: #000;
             transform-origin: center;
-            transition: .4s ease;
             will-change: transform;
+            transition: .4s ease;
+            transition-delay: 0.05s;
         }
         &:hover {
             color: #002d5a;
@@ -46,7 +50,7 @@ header {
     }
     nav {
         display: flex;
-        gap: 2.25rem;
+        gap: 2.5rem;
         a {
             //text-transform: uppercase;
             font-size: 18px;
@@ -56,7 +60,8 @@ header {
             color: rgb(25, 25, 25);
             padding: 2px;
             cursor: pointer;
-            transition: .35s ease;
+            transition: .325s ease;
+            transition-delay: 0.05s;
             &::after {
                 content: '';
                 position: absolute;
@@ -67,7 +72,8 @@ header {
                 opacity: 0;
                 background-color: #002d5a;
                 transform: translateX(-50%);
-                transition: 0.35s ease;
+                transition: 0.325s ease;
+                transition-delay: 0.05s;
             }
             &:hover {
                 color: #002d5a;
@@ -93,9 +99,11 @@ header {
         border-radius: 50px;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.3s ease;
+        transition-delay: 0.05s;
         .icon {
             font-size: 16px;
             transition: 0.275s ease;
+            transition-delay: 0.05s;
         }
         &:hover {
             background-color: #002d5a;
@@ -106,3 +114,5 @@ header {
         }
     }
 }
+
+@media screen and (max-width:1600px) {}

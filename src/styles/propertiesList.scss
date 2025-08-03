@@ -173,3 +173,13 @@
         }
     }
 }
+
+@media screen and (max-width:1600px) {
+    .propertiesList-section {
+        .section-header,
+        .filters-row,
+        .list-container {
+            width: 85%;
+        }
+    }
+}

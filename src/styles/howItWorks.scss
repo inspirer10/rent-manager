@@ -266,3 +266,20 @@
         }
     }
 }
+
+@media screen and (max-width:1600px) {
+    .how-it-works-section {
+        width: 95%;
+        .how-steps {}
+    }
+}
+
+@media screen and (max-width:1450px) {
+    .how-it-works-section {
+        width: 97.5%;
+        .how-steps {}
+        .how-grid {
+            width: 87.5%;
+        }
+    }
+}

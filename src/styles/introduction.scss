@@ -51,6 +51,9 @@
             color: rgb(25, 25, 139);
             color: rgb(10, 10, 125);
             //color: #004d9a;
+            background: linear-gradient(125deg, rgb(10, 10, 125), #004d9a 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
     .subHeading {
@@ -183,5 +186,20 @@
     .thumbnails-wrapper:has(.card:hover) .card:not(:hover) {
         filter: blur(2.5px) brightness(0.9);
         opacity: 0.55;
+    }
+}
+
+@media screen and (max-width:1600px) {
+    .introduction-section {
+        width: 90%;
+        .thumbnails-wrapper {
+            min-width: 800px;
+        }
+    }
+}
+
+@media screen and (max-width:1450px) {
+    .introduction-section {
+        width: 95%;
     }
 }

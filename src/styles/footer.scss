@@ -163,3 +163,10 @@
         }
     }
 }
+
+@media screen and (max-width:1600px) {
+    .footer-section .footer-main,
+    .footer-section .footer-legal {
+        width: 87.5%;
+    }
+}
