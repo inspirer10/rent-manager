@@ -67,6 +67,7 @@
             flex-direction: column;
             align-items: center;
             transition: 0.3s ease;
+            transition-delay: 0.05s;
             &:hover,
             &:focus-within {
                 box-shadow: 0 8px 32px rgba(59, 130, 246, 0.18);
@@ -85,11 +86,12 @@
                 margin-bottom: 0.75rem;
             }
             p {
-                font-size: 18px;
-                color: rgb(93, 96, 121);
+                width: 90%;
                 font-family: 'SUSE', sans-serif;
+                font-size: 18px;
                 line-height: 1.5;
-                letter-spacing: -0px;
+                letter-spacing: 0px;
+                color: rgb(93, 96, 121);
                 text-wrap: balance;
             }
         }
@@ -267,19 +269,36 @@
     }
 }
 
-@media screen and (max-width:1600px) {
+@media screen and (max-width: 1600px) {
     .how-it-works-section {
         width: 95%;
         .how-steps {}
     }
 }
 
-@media screen and (max-width:1450px) {
+@media screen and (max-width: 1450px) {
     .how-it-works-section {
         width: 97.5%;
-        .how-steps {}
+        .how-steps {
+            gap: 2rem;
+        }
         .how-grid {
-            width: 87.5%;
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 1285px) {
+    .how-it-works-section .how-grid {
+        width: 92.5%;
+    }
+    .how-it-works-section {
+        .how-steps {
+            .how-step {
+                p {
+                    font-size: 16px;
+                }
+            }
         }
     }
 }

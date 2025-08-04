@@ -54,8 +54,9 @@
             flex-direction: column;
             align-items: flex-start;
             position: relative;
-            transition: 0.35s ease;
             border-top: 3px solid #3b82f6;
+            transition: 0.35s ease;
+            transition-delay: 0.05s;
             // or for a gradient:
             // border-top: 3px solid;
             // border-image: linear-gradient(90deg, #3b82f6, #2563eb) 1;
@@ -73,7 +74,7 @@
                 transform: translateY(-4px);
             }
             .testimonial-text {
-                font-family: 'Lato', 'SUSE', sans-serif;
+                font-family: 'Inter', sans-serif;
                 font-size: 18px;
                 font-style: italic;
                 color: rgb(5, 0, 50);
@@ -182,6 +183,21 @@
     .testimonials-section {
         .testimonials-list {
             width: 85%;
+        }
+    }
+}
+
+@media screen and (max-width:1450px) {
+    .testimonials-section {
+        width: 87.5%;
+        .testimonials-list {}
+    }
+}
+
+@media screen and (max-width: 1285px) {
+    .testimonials-section {
+        .testimonials-list {
+            width: 92.5%;
         }
     }
 }

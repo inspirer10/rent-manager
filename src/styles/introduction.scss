@@ -201,5 +201,20 @@
 @media screen and (max-width:1450px) {
     .introduction-section {
         width: 95%;
+        .subHeading {
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width:1370px) {
+    .introduction-section {
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width:1285px) {
+    .introduction-section {
+        margin-top: 7.5rem;
     }
 }

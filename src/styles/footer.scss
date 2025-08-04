@@ -39,7 +39,8 @@
             color: rgb(5, 0, 50);
             text-decoration: none;
             font-size: 1rem;
-            transition: 0.35s ease;
+            transition: 0.325s ease;
+            transition-delay: 0.05s;
             &:hover,
             &:focus {
                 color: #2563eb;
@@ -64,13 +65,15 @@
             gap: 0.5rem;
             margin: 0;
             width: fit-content;
-            transition: .4s ease;
             cursor: pointer;
+            transition: .4s ease;
+            transition-delay: 0.05s;
             .icon {
                 color: #000;
                 transform-origin: center;
-                transition: .4s ease;
                 will-change: transform;
+                transition: .4s ease;
+                transition-delay: 0.05s;
             }
             &:hover {
                 color: #002d5a;
@@ -98,7 +101,8 @@
             background: #e6eefe;
             border-radius: 50%;
             padding: 8px;
-            transition: 0.35s ease;
+            transition: 0.325s ease;
+            transition-delay: 0.05s;
             &:hover,
             &:focus {
                 background: #3b82f6;
@@ -127,6 +131,7 @@
                 padding-bottom: 1px;
                 overflow: hidden;
                 transition: 0.3s ease;
+                transition-delay: 0.05s;
                 &::after {
                     content: '';
                     position: absolute;
@@ -135,8 +140,9 @@
                     width: 0;
                     height: 1px;
                     background: #2563eb;
-                    transition: left 0.3s, width 0.3s;
                     border-radius: 2px;
+                    transition: left 0.3s, width 0.3s;
+                    transition-delay: 0.05s;
                 }
                 &:hover,
                 &:focus {
@@ -168,5 +174,28 @@
     .footer-section .footer-main,
     .footer-section .footer-legal {
         width: 87.5%;
+    }
+}
+
+@media screen and (max-width:1450px) {
+    .footer-section .footer-main,
+    .footer-section .footer-legal {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1375px) {
+    .footer-section .footer-main,
+    .footer-section .footer-legal {
+        width: 92.5%;
+    }
+    .footer-section .footer-brand p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:1285px) {
+    .footer-section .footer-brand p {
+        font-size: 14px;
     }
 }

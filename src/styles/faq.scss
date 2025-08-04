@@ -81,10 +81,10 @@
         transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.25s;
         p {
             font-family: 'Ubuntu', sans-serif;
-            line-height: 1.45;
-            overflow: hidden;
             font-size: 18px;
+            line-height: 1.45;
             color: rgb(93, 96, 121);
+            overflow: hidden;
             padding: 0 1rem;
         }
         &.open {
@@ -100,5 +100,11 @@
 @media screen and (max-width:1600px) {
     .faq-section {
         width: 90%;
+    }
+}
+
+@media screen and (max-width:1450px) {
+    .faq-section {
+        width: 95%;
     }
 }
