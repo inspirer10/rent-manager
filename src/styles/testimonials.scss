@@ -201,3 +201,44 @@
         }
     }
 }
+
+@media screen and (max-width: 650px) {
+    .testimonials-section {
+        width: 97.5%;
+        .section-header {
+            .header-wrapper {
+                h2 {
+                    font-size: calc(2.75rem - 2px);
+                    letter-spacing: -1.25px;
+                    text-align: center;
+                }
+                .subHeading {
+                    margin-top: 0.5rem;
+                    font-size: 18px;
+                    width: 97.5%;
+                    text-align: center;
+                }
+            }
+            .icon {
+                display: none;
+            }
+        }
+        .testimonials-list {
+            width: 97.5%;
+            gap: 1rem;
+            .testimonial {
+                padding: 1.5rem 0.75rem;
+                .testimonial-text {
+                    font-size: 15px;
+                }
+                .testimonial-meta {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        }
+        button {
+            margin: 3rem auto 1rem;
+        }
+    }
+}

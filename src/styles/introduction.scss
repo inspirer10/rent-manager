@@ -218,3 +218,34 @@
         margin-top: 7.5rem;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .introduction-section {
+        width: 100%;
+        .waitlist-badge {
+            gap: 6px;
+            p {
+                font-size: 14px;
+                letter-spacing: -0.25px;
+            }
+        }
+        .heading {
+            font-size: 50px;
+            text-wrap: balance;
+        }
+        .subHeading {
+            width: 97.5%;
+            font-size: 18px;
+        }
+        .thumbnails-wrapper {
+            min-width: unset;
+            flex-direction: row;
+            width: 95%;
+            flex-wrap: wrap;
+            .card {
+                width: 47.5%;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}

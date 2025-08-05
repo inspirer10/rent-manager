@@ -302,3 +302,87 @@
         }
     }
 }
+
+@media screen and (max-width: 650px) {
+    .how-it-works-section {
+        width: 100%;
+        .preHeading {
+            padding: 12px 2rem;
+        }
+        .heading {
+            font-size: 2.75rem;
+            text-wrap: balance;
+            letter-spacing: -0.75px;
+        }
+        .subHeading {
+            font-size: 20px;
+            text-wrap: balance;
+        }
+        .how-steps {
+            flex-direction: column;
+            align-items: center;
+            .how-step p {
+                width: 100%;
+            }
+        }
+    }
+    .how-it-works-section {
+        .how-grid {
+            width: 97.5%;
+            article {
+                flex-direction: column !important;
+                &:nth-child(2) {
+                    flex-direction: column-reverse !important;
+                }
+                .description {
+                    max-width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .how-label {
+                        padding: 0.5rem 2rem;
+                        border-radius: 50px;
+                    }
+                    .how-title {
+                        font-size: 2.25rem;
+                        text-align: center;
+                        letter-spacing: -0.75px;
+                    }
+                    .how-desc {
+                        width: 90%;
+                        font-size: 16px;
+                        text-align: justify;
+                    }
+                }
+                .image-wrapper {
+                    width: 97.5%;
+                    .how-img-wrap {
+                        .how-payment-badge {
+                            padding: 12px 30px;
+                            .how-payment-text {
+                                font-size: 17px;
+                            }
+                        }
+                        .how-notification {
+                            gap: 0;
+                            width: 98%;
+                            padding: 14px 4px;
+                            justify-content: space-between;
+                            .how-notif-icon {
+                                font-size: 14px;
+                            }
+                            .how-notif-title {
+                                font-size: 14px;
+                                letter-spacing: -0.5px;
+                            }
+                            .how-notif-desc {
+                                font-size: 14px;
+                                letter-spacing: -0.5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

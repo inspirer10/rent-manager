@@ -108,3 +108,32 @@
         width: 95%;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .faq-section {
+        width: 100%;
+        .heading {
+            font-size: 2.5rem;
+            text-wrap: balance;
+        }
+        .subHeading {
+            margin-top: 0.75rem;
+            font-size: 18px;
+            width: 97.5%;
+            text-wrap: balance;
+        }
+        .faq-container {
+            width: 95%;
+            .faq-question {
+                font-size: 15px;
+                letter-spacing: -0.5px;
+                padding: 0.75rem 0.5rem;
+            }
+            .faq-answer p {
+                font-size: 14px;
+                line-height: 1.5;
+                padding: 0rem 0.5rem;
+            }
+        }
+    }
+}
