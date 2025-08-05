@@ -199,3 +199,39 @@
         font-size: 14px;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .footer-section {
+        padding: 10vh 0 1.5rem;
+        .footer-brand {
+            h2 {
+                font-size: 32px;
+                letter-spacing: 0.5px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+    .footer-section .footer-brand,
+    .footer-section .footer-links,
+    .footer-section .footer-contact,
+    .footer-section .footer-social {
+        flex: 1 1 100%;
+        min-width: 100%;
+        align-items: center;
+        text-align: center !important;
+        margin-bottom: 1rem;
+    }
+    .footer-section .footer-main,
+    .footer-section .footer-legal {
+        width: 97.5%;
+    }
+    .footer-section .footer-legal {
+        margin-top: 0;
+        padding-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}

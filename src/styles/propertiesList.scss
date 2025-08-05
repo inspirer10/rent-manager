@@ -195,6 +195,9 @@
 }
 
 @media screen and (max-width: 650px) {
+    .propertiesList-section {
+        padding-top: 10vh;
+    }
     .propertiesList-section .section-header {
         .header-wrapper {
             h2 {

@@ -205,6 +205,7 @@
 @media screen and (max-width: 650px) {
     .testimonials-section {
         width: 97.5%;
+        padding-top: 10vh;
         .section-header {
             .header-wrapper {
                 h2 {
@@ -238,7 +239,10 @@
             }
         }
         button {
+            font-size: 16px;
+            font-weight: 500;
             margin: 3rem auto 1rem;
+            padding: 16px 2.25rem;
         }
     }
 }
